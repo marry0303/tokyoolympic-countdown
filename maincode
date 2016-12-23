@@ -1,0 +1,19 @@
+class Time 
+  def timezone(timezone = 'UTC')
+    old = ENV['TZ']
+    utc = self.dup.utc
+    ENV['TZ'] = timezone
+    output = utc.localtime
+    ENV['TZ'] = old
+    output
+  end
+end
+
+@time = Time.now
+@time2=Time.utc(2020, 7, 24, 11, 00, 00)
+daynow=@time.timezone('Asia/Tokyo')      
+day2020 =@time2.timezone('Asia/Tokyo')
+puts daynow
+puts day2020
+second=day2020-daynow
+puts second.to_i
