@@ -1,3 +1,4 @@
+# Here your code !
 class Time 
   def timezone(timezone = 'UTC')
     old = ENV['TZ']
@@ -16,4 +17,11 @@ day2020 =@time2.timezone('Asia/Tokyo')
 puts daynow
 puts day2020
 second=day2020-daynow
-puts second.to_i
+second=second.to_i
+puts "東京オリンピックまであと#{second}秒です。"
+minute=second/60
+puts "東京オリンピックまであと#{minute}分です。"
+hour=minute/60
+puts "東京オリンピックまであと#{hour}時間です。"
+days=hour/24
+puts "東京オリンピックまであと#{days}日です。"
