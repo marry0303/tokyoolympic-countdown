@@ -1,4 +1,3 @@
-# Here your code !
 class Time 
   def timezone(timezone = 'UTC')
     old = ENV['TZ']
